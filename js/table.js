@@ -80,7 +80,7 @@ $(document).ready(function () {
 	let saveBut = $("<button>")
 	saveBut.attr("type", "button")
 	saveBut.attr("class", "btn btn-success save-button")
-	saveBut.append($("<span class='glyphicon glyphicon-floppy-disk'></span>"))
+	saveBut.text("Save")
 	saveBut.click(function () { saveText(form) })
   
 	form.append(saveBut)
@@ -97,7 +97,7 @@ $(document).ready(function () {
 	let delBut = $("<button>")
 	delBut.attr("type", "button")
 	delBut.attr("class", "btn btn-danger delete-button")
-	delBut.append($("<span class='glyphicon glyphicon-trash'></span>"))
+	delBut.text("Delete")
 	delBut.click(function () { deleteText(form) })
 	delBut.hide()
   
@@ -254,7 +254,7 @@ $(document).ready(function () {
   
   
 	if (!!width) {
-	  $("#datatable").css({ "width": width })
+	  $("#datatable").css({ "border-width": `${width}px` })
 	}
   
 	if (style != "default") {
